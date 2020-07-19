@@ -1,0 +1,8 @@
+# Create new Customer
+POST http://localhost:3333/customers
+Content-Type: application/json
+
+{
+  "name": "Sérgio Carvalho",
+  "email": "sergiocarvalho.m@outlook.com"
+}
