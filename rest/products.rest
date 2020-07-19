@@ -1,0 +1,9 @@
+# Create new Product
+POST http://localhost:3333/products
+Content-Type: application/json
+
+{
+  "name": "Samsung Galaxy A20",
+  "price": 999.98,
+  "quantity": 20
+}
