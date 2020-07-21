@@ -27,7 +27,6 @@ export default class CreateProducts1595194643136 implements MigrationInterface {
           {
             name: 'quantity',
             type: 'integer',
-            isUnique: true,
           },
           {
             name: 'created_at',
