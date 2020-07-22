@@ -5,6 +5,7 @@ import AppError from '@shared/errors/AppError';
 import IProductsRepository from '@modules/products/repositories/IProductsRepository';
 import ICustomersRepository from '@modules/customers/repositories/ICustomersRepository';
 import Product from '@modules/products/infra/typeorm/entities/Product';
+import { parse } from 'querystring';
 import Order from '../infra/typeorm/entities/Order';
 import IOrdersRepository from '../repositories/IOrdersRepository';
 
@@ -133,7 +134,10 @@ class CreateOrderService {
     );
 
     await this.productsRepository.updateQuantity(orderedProducts);
-    return order;
+
+    const parsedOrder = { ...order, order_products: order.orders_products };
+    delete parsedOrder.orders_products;
+    return parsedOrder;
   }
 }
 
