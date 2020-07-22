@@ -1,0 +1,17 @@
+# Create new Order
+POST http://localhost:3333/orders
+Content-Type: application/json
+
+{
+  "customer_id": "b50111cb-fe4b-40a6-bcc7-0471291884c9",
+  "products": [
+    {
+      "id": "a3f846bc-503c-40b3-b102-072d1c86e129",
+      "quantity": 10
+    },
+    {
+      "id": "ebcd6124-fbaa-4468-8ac5-34b666ab8e10",
+      "quantity": 5
+    }
+  ]
+}

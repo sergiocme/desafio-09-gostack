@@ -42,7 +42,7 @@ class ProductsRepository implements IProductsRepository {
   public async updateQuantity(
     products: IUpdateProductsQuantityDTO[],
   ): Promise<Product[]> {
-    // TODO
+    return this.ormRepository.save(products);
   }
 }
 
